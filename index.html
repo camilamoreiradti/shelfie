@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelfie</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container nav-content">
+                <p class="nav-app-name">Shel<span>fie</span></p>
+                <div class="nav-actions">
+                    <button class="nav-button selected">Search</button>
+                    <button class="nav-button">Saved</button>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <search class="search">
+                <form action="">
+                    <input class="search-bar" type="search" placeholder="Seach books, authors..."></input>
+                </form>
+                <div class="filter-list">
+                    <button class="filter-item selected">All</button>
+                    <button class="filter-item">Fiction</button>
+                    <button class="filter-item">Non-fiction</button>
+                    <button class="filter-item">Science</button>
+                    <button class="filter-item">History</button>
+                    <button class="filter-item">Fantasy</button>
+                </div>
+            </search>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <p class="result">About <span id="result-count">9</span> results</p>
+            <div class="book-card">
+                <img class="book-cover" src="img/image.png">
+                <div class="book-info">
+                    <div class="book-info-header">
+                        <div class="book-info-header-text">
+                            <p class="book-info-title" id="book-info-title">Pride and Prejudice</p>
+                            <p class="book-info-metadata">
+                                <span class="book-info-author" id="book-info-author">Jane Austen</span> · <span
+                                    class="book-info-year" id="book-info-year">2019</span>
+                            </p>
+                        </div>
+                        <button class="save-item">
+                            <img src="img/heart-fill.svg">
+                        </button>
+                    </div>
+                    <p class="book-info-description">Her works critique the novels of sensibility of the second half of
+                        the
+                        18th century and are part of the transition to 19th-century literary realism.</p>
+                </div>
+
+            </div>
+            <div class="book-card">
+                <img class="book-cover" src="img/image.png">
+                <div class="book-info">
+                    <div class="book-info-header">
+                        <div class="book-info-header-text">
+                            <p class="book-info-title">Pride and Prejudice</p>
+                            <p class="book-info-metadata">
+                                <span class="book-info-author">Jane Austen</span> · <span
+                                    class="book-info-year">2019</span>
+                            </p>
+                        </div>
+                        <button class="save-item">
+                            <img src="img/heart.svg">
+                        </button>
+                    </div>
+                    <p class="book-info-description">Her works critique the novels of sensibility of the second half of
+                        the
+                        18th century and are part of the transition to 19th-century literary realism.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="footer-text">Powered by Google Books API</p>
+        </footer>
+    </div>
+</body>
+
+</html>

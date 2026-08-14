@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #f8f9fa;
+    --surface: #fff;
+    --primary-color: #1a73e8;
+    --text-prymary: #202124;
+    --secondary: #5f6368;
+    --heart: #ea4335;
+    --disabled: #9aa0a6;
+    --divider: #e8eaed;
+    --font-family: 'Roboto', sans-serif;
+    --font-bold: 500;
+    --font-regular: 400;
+    --font-size-small: .75rem;
+    --font-size-medium: .875rem;
+    --font-size-large: 1rem;
+    --max-radius: 999px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    border: none;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--background-color);
+
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 1080px;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--divider);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+main {}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    border-bottom: 1px solid var(--divider);
+}
+
+.nav-app-name {
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-large);
+}
+
+.nav-app-name span {
+    color: var(--primary-color);
+}
+
+.nav-button {
+    background-color: transparent;
+    padding: 1rem;
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-medium);
+}
+
+.nav-button.selected {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+.nav-button:hover {
+    background-color: var(--background-color);
+}
+
+.search {
+    padding: .8rem 0;
+}
+
+.search-bar {
+    width: 100%;
+    border-radius: var(--max-radius);
+    padding: .5rem 3rem;
+    background: url(img/search.svg) 1rem / 1rem no-repeat var(--background-color);
+}
+
+.search-bar:hover {
+    background-color: var(--divider);
+}
+
+.search-bar::placeholder {
+    color: var(--disabled);
+}
+
+.search-bar:focus-visible {
+    background-color: var(--surface);
+    outline: none;
+}
+
+.filter-list {
+    display: flex;
+    flex-flow: wrap;
+    padding-top: .5rem;
+    gap: .5rem;
+    align-items: center;
+}
+
+.filter-item {
+    padding: .4rem .8rem;
+    border: 1px solid var(--divider);
+    border-radius: var(--max-radius);
+    white-space: nowrap;
+    background-color: transparent;
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+}
+
+.filter-item:hover {
+    background: var(--background-color);
+}
+
+.filter-item.selected {
+    border-color: var(--primary-color);
+    background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+    color: var(--primary-color);
+}
+
+.result {
+    color: var(--secondary);
+    font-size: var(--font-size-small);
+    margin: 1rem 0;
+}
+
+.book-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--surface);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.book-card:hover {
+    background-color: var(--background-color);
+}
+
+.book-cover {
+    border-radius: 8px;
+    height: 90px;
+}
+
+.book-info {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: .5rem;
+}
+
+.book-info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-info-header-text {
+    display: flex;
+    flex-flow: column;
+    gap: .2rem;
+}
+
+.book-info-title {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-bold);
+}
+
+.book-info-metadata,
+.book-info-description {
+    font-size: var(--font-size-small);
+    color: var(--secondary);
+}
+
+.book-info-description {
+    line-height: 19.5px;
+    padding-right: 3rem;
+}
+
+.save-item {
+    background-color: transparent;
+    border-radius: var(--max-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.save-item:hover {
+    background-color: var(--divider);
+}
+
+.footer-text {
+    font-size: var(--font-size-small);
+    color: var(--secondary);
+    text-align: center;
+    margin: 1rem;
+}
