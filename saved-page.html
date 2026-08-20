@@ -4,31 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelfie</title>
+    <title>Shelfie - Saved</title>
     <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
         <shelfie-nav></shelfie-nav>
-        <div class="container">
-            <search class="search">
-                <form action="">
-                    <input class="search-bar" type="search" placeholder="Seach books, authors..."></input>
-                </form>
-                <div class="filter-list">
-                    <button class="filter-item selected">All</button>
-                    <button class="filter-item">Fiction</button>
-                    <button class="filter-item">Non-fiction</button>
-                    <button class="filter-item">Science</button>
-                    <button class="filter-item">History</button>
-                    <button class="filter-item">Fantasy</button>
-                </div>
-            </search>
-        </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container" hidden>
             <p class="result">About <span id="result-count">9</span> results</p>
             <ul>
                 <li class="book-card">
@@ -66,6 +51,13 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <div class="container empty-list-container">
+            <div class="heart-icon-background">
+                <img src="./img/heart.svg" class="heart-icon"/>
+            </div>
+            <p class="empty-list-title">No saved books</p>
+            <p class="empty-list-subtitle">Tap the heart on any book to save it here.</p>
         </div>
     </main>
     <shelfie-footer></shelfie-footer>

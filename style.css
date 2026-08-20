@@ -7,6 +7,7 @@
     --text-prymary: #202124;
     --secondary: #5f6368;
     --heart: #ea4335;
+    --heart-background: #FCE8E6;
     --disabled: #9aa0a6;
     --divider: #e8eaed;
     --font-family: 'Roboto', sans-serif;
@@ -47,9 +48,6 @@ header {
     z-index: 100;
 }
 
-
-main {}
-
 .nav-content {
     display: flex;
     align-items: center;
@@ -70,13 +68,17 @@ nav {
 }
 
 .nav-button {
+    display: inline-block;
     background-color: transparent;
+    text-decoration: none;
     padding: 1rem;
+    color: var(--text-prymary);
     font-weight: var(--font-bold);
     font-size: var(--font-size-medium);
+    cursor: pointer;
 }
 
-.nav-button.selected {
+.nav-button.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
@@ -199,13 +201,15 @@ nav {
 }
 
 .save-item {
-    background-color: transparent;
+    background: url(img/heart.svg) 0 / 1rem no-repeat transparent;
+    background-position: center;
     border-radius: var(--max-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .5rem;
+    padding: 1rem;
     cursor: pointer;
+}
+
+.save-item.selected {
+    background-image: url(img/heart-fill.svg)
 }
 
 .save-item:hover {
@@ -218,3 +222,32 @@ nav {
     text-align: center;
     margin: 1rem;
 }
+
+.empty-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.heart-icon-background {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: var(--heart-background);
+    border-radius: 50%;
+}
+
+.empty-list-title {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-bold);
+    margin-bottom: .2rem;
+}
+
+.empty-list-subtitle {
+    font-size: var(--font-size-small);
+    color: var(--secondary);
+}
+
